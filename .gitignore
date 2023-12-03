@@ -1,2 +1,3 @@
 node_modules
-python/model/**
+python/model/**.h5
+python/model/**.keras
