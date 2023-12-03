@@ -29,9 +29,7 @@ fastify
 	.post<{ Body: Prediction }>('/post', async (request, reply) => {
 		const input = request.body.input;
 		let prediction = (await getPrediction(input)) as string;
-		prediction = prediction.replace(/\s+/g, ',');
 		let prediction_array = JSON.parse(prediction);
-		console.log(prediction_array);
 		return { prediction_array };
 	})
 	.get('/test', async (request, reply) => {
